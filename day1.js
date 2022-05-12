@@ -1,3 +1,6 @@
+// ===========================================================
+//                      NUMBER 1
+// ===========================================================
 function plusMinus(arr) {
     let positives = 0, negatives = 0, zeros = 0;
     const len = arr.length || 0;
@@ -21,6 +24,9 @@ function plusMinus(arr) {
 }
 plusMinus([-4, 3, -9, 0, 4, 1])
 
+// ===========================================================
+//                      NUMBER 2
+// ===========================================================
 function miniMaxSum(arr) {
     // Write your code here
     // assess the #'s in the array & arrange in ascending order
@@ -35,7 +41,9 @@ function miniMaxSum(arr) {
 
 miniMaxSum([1, 2, 5, 4, 3])
 
-
+// ===========================================================
+//                      NUMBER 3
+// ===========================================================
 function timeConversion(s) {
     // Write your code here
     // evaluate s based on it being AM or PM
