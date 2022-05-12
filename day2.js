@@ -60,3 +60,19 @@ function diagonalDifference(arr) {
 diagonalDifference([11, 2, 4,
     4, 5, 6,
     10, 8, -12,])
+// ===========================================================
+//                      NUMBER 3
+// ===========================================================
+
+// Comparison sorting
+// iterate through an array of 100 #'s and have a counter array that counts 1-100 how many occurrences there are
+// ex: arr = [1, 1, 3, 2, 1]
+// final result = [0, 3, 1, 1]
+function countingSort(arr) {
+    // Write your code here
+    const counts = Array(100).fill(0);
+    arr.forEach(item => { ++counts[item]; });
+    return counts;
+}
+
+console.log(countingSort([1, 1, 3, 2, 1]))
