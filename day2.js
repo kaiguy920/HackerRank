@@ -76,3 +76,31 @@ function countingSort(arr) {
 }
 
 console.log(countingSort([1, 1, 3, 2, 1]))
+
+// ===========================================================
+//                      NUMBER 4
+// ===========================================================
+// find first unique letter that isn't repeated & return the index of that letter; if no unique letter, return -1
+
+function firstUniqChar(s) {
+    const occurenceCount = {}
+    for (const letter of s) {
+        occurenceCount[letter] = (occurenceCount[letter] || 0) + 1
+    }
+    console.log(occurenceCount)
+
+    // make a second function to be able to search for the value of 1 & display the key
+    function getKeyByValue(object, value) {
+        return Object.keys(object).find(key => object[key] === value);
+    }
+    const unique = (getKeyByValue(occurenceCount, 1))
+    console.log("unique", unique)
+    if (unique) {
+        return s.indexOf(unique)
+    } else {
+        return -1
+    }
+
+};
+
+console.log(firstUniqChar("leetcode"))
