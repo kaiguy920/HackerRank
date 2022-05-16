@@ -27,3 +27,31 @@ function gridChallenge(grid) {
     return 'YES'
 }
 gridChallenge(['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv'])
+
+// ===========================================================
+//                      NUMBER 2
+// ===========================================================
+
+// Given an integer, we need to find the super digit of the integer
+// If x has only 1 digit, then its super digit is x.
+// Otherwise, the super digit of x is equal to the super digit of the sum of the digits of x.
+
+function superDigit(n, k) {
+    // Write your code here
+    let nLength = n.length;
+
+    if (nLength == 1) {
+        return n
+    }
+
+    let nArr = n.split('');
+
+
+    let nSum = 0;
+
+    for (let i = 0; i < nArr.length; i++) {
+        nSum = nSum + (k * parseInt(nArr[i]))
+    }
+
+    return superDigit(nSum.toString(), 1)
+}
