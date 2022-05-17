@@ -39,19 +39,6 @@ function caesarCipher(s, k) {
 
 
 function caesarCipher(s, k) {
-    //     if (k === 0) { return s }
-    //     const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    //     return s.replace(/[a-zA-Z]/g, (char) => {
-    //         let newChar = alpha[(alpha.indexOf(char.toLowerCase()) + k) % 26]
-    //         if (char == char.toUpperCase()) {
-    //             newChar = newChar.toUpperCase();
-    //         }
-    //         return newChar
-    //     })
-
-
-    // }
-
 
     const lowerCase = 'abcdefghijklmnopqrstuvwxyz'
     const upperCase = lowerCase.toUpperCase()

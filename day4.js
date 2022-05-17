@@ -13,7 +13,7 @@ function gridChallenge(grid) {
         // then, push into a new array
         newGrid.push(rows)
     }
-    console.log(newGrid)
+    // console.log(newGrid)
     // then, evaluate if they are in ascending alphabetical order in each row & column
     const column = newGrid[0].length
     for (let j = 0; j < newGrid.length - 1; j++) {
@@ -55,3 +55,54 @@ function superDigit(n, k) {
 
     return superDigit(nSum.toString(), 1)
 }
+
+// ===========================================================
+//                      NUMBER 3
+// ===========================================================
+
+var longestCommonPrefix = function (strs) {
+    let prefix = ""
+    if (strs === null || strs.length === 0) return prefix
+
+    for (let i = 0; i < strs[0].length; i++) {
+        const char = strs[0][i] // loop through all characters of the very first string. 
+
+        for (let j = 1; j < strs.length; j++) {
+            // loop through all other strings in the array
+            if (strs[j][i] !== char) return prefix
+        }
+        prefix = prefix + char
+    }
+
+    return prefix
+}
+
+console.log(longestCommonPrefix(["flower", "flow", "flight"]))
+
+// ===========================================================
+//                      NUMBER 4
+// ===========================================================
+
+const minimumBribes = (q) => {
+    let bribes = 0
+    let chaotic = false
+    // loop backward through q
+    for (let i = q.length - 1; i >= 0; i--) {
+        // if q index is greater than three less than index value, change chaotic to true
+        if (q[i] - i > 3) {
+            chaotic = true
+        }
+        // if value of one index to the left is greater than q[i], then add a number to the bribes
+        for (let j = q[i] - 2; j < i; j++) {
+            if (q[j] > q[i]) bribes++
+        }
+    }
+    if (chaotic) {
+        console.log("Too chaotic")
+    }
+    else {
+        console.log(bribes)
+    }
+}
+
+minimumBribes([2, 1, 3, 5, 4])
