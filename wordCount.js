@@ -5,12 +5,19 @@ const wordCount = (str) => {
     const remove = str.replace(/\./g, "").toLowerCase()
     console.log(remove)
     const arr = remove.split(' ')
-    console.log(arr)
+    console.log("this is arr", arr)
 
-    const counter = []
+    const counter = {}
     for (let i = 0; i < arr.length; i++) {
-
+        const word = arr[i]
+        if (!arr[word]) {
+            arr[word] = 1;
+        } else {
+            // if this word IS already a property of wordCounts, then increase its count value
+            arr[word]++;
+        }
     }
+
 
     console.log(counter)
 }
