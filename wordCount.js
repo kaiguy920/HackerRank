@@ -4,22 +4,24 @@ const wordCount = (str) => {
 
     const remove = str.replace(/\./g, "").toLowerCase()
     console.log(remove)
-    const arr = remove.split(' ')
+    const removeComma = remove.replace(/\,/g, "")
+    const arr = removeComma.split(' ')
     console.log("this is arr", arr)
 
     const counter = {}
     for (let i = 0; i < arr.length; i++) {
         const word = arr[i]
-        if (!arr[word]) {
-            arr[word] = 1;
+
+        if (!counter[word]) {
+            counter[word] = 1;
         } else {
             // if this word IS already a property of wordCounts, then increase its count value
-            arr[word]++;
+            counter[word]++;
         }
     }
+    for (in couter)
 
-
-    console.log(counter)
+        console.log(counter)
 }
 
 wordCount(input)
