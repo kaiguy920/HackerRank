@@ -1,0 +1,53 @@
+// given an array of nums, replace any duplicates with an underscore
+// keep the relative arrancgement the same
+// example: Input: nums = [0,0,1,1,1,2,2,3,3,4]
+// Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+
+const removeDuplicates = (nums) => {
+    const newArr = []
+    const numCount = {}
+    for (const count of nums) {
+        numCount[count] = (numCount[count] || 0) + 1
+    }
+    newArr.push(Object.keys(numCount).toString())
+    let keyCount = []
+    for (const key in numCount) {
+        if (numCount.hasOwnProperty(key)) {
+            keyCount.push((numCount[key]) - 1)
+        }
+    }
+    const reducer = (accumulator, curr) => accumulator + curr;
+    // console.log("sum", keyCount.reduce(reducer));
+    newArr.push("_".repeat(keyCount.reduce(reducer)))
+    console.log(newArr)
+    const arr = Array.from(String(newArr))
+    const filtered = arr.filter(function (value, index, arr) {
+        return value != ",";
+    });
+    console.log(filtered)
+}
+removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
+
+const removesDuplicates = (nums) => {
+    const newArr = []
+    const numCount = {}
+    for (const count of nums) {
+        numCount[count] = (numCount[count] || 0) + 1
+    }
+    newArr.push(Object.keys(numCount).toString())
+    let keyCount = []
+    for (const key in numCount) {
+        if (numCount.hasOwnProperty(key)) {
+            keyCount.push((numCount[key]) - 1)
+        }
+    }
+
+    console.log(newArr)
+    const arr = Array.from(String(newArr))
+    const filtered = arr.filter(function (value, index, arr) {
+        return value != ",";
+    });
+    console.log(filtered.join(","))
+}
+removesDuplicates([1, 1, 2])
+
