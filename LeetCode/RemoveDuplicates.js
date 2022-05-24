@@ -41,13 +41,20 @@ const removesDuplicates = (nums) => {
             keyCount.push((numCount[key]) - 1)
         }
     }
-
-    console.log(newArr)
+    const arr3 = []
+    console.log("this is newArr parseInt", parseInt(newArr))
+    console.log("this is newArr", newArr)
     const arr = Array.from(String(newArr))
     const filtered = arr.filter(function (value, index, arr) {
-        return value != ",";
+        // return value != ",";
+        if (value != ",") {
+            arr3.push(parseInt(value))
+        }
     });
-    console.log(filtered.join(","))
+    console.log(filtered.join(','))
+    console.log("arr3", arr3)
+    console.log(typeof arr[0])
+
 }
 removesDuplicates([1, 1, 2])
 
