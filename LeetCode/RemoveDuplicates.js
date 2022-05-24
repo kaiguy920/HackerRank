@@ -24,10 +24,12 @@ const removeDuplicates = (nums) => {
     const filtered = arr.filter(function (value, index, arr) {
         return value != ",";
     });
-    console.log(filtered)
+    console.log("filtered with _", filtered)
 }
 removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
 
+
+// to remove string without duplicates
 const removesDuplicates = (nums) => {
     const newArr = []
     const numCount = {}
@@ -58,6 +60,7 @@ const removesDuplicates = (nums) => {
 }
 removesDuplicates([1, 1, 2])
 
+// to just return length of string without duplicates
 var removeDuplicatess = function (nums) {
     if (nums.length == 0) return 0;
 
