@@ -66,3 +66,25 @@ function divisibleSumPairs(n, k, ar) {
 
 divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
 // should return 5
+
+// ===========================================================
+//                      NUMBER 3
+// ===========================================================
+// given an array of strings & queries, return an array of how many times the querie appears in the string
+function matchingStrings(strings, queries) {
+    let matches = []
+    for (let q of queries) {
+        let count = 0;
+        for (let s of strings) {
+            if (q === s) {
+                count++;
+            }
+        }
+        matches.push(count);
+    }
+    console.log(matches)
+    // return matches;
+
+}
+matchingStrings(["ab", "ab", "abc"], ["ab", "abc", "bc"])
+// should return [2, 1, 0]
