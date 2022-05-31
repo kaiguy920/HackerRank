@@ -43,3 +43,26 @@ function breakingRecords2(scores) {
     // return [maxRecord, minRecord]
 }
 breakingRecords2([10, 5, 20, 20, 4, 5, 2, 25, 1])
+
+
+// ===========================================================
+//                      NUMBER 2
+// ===========================================================
+// given an array of numbers (ar), return how many times where the sum of 2 numbers in the array are divisible by k
+// n = length of the array
+function divisibleSumPairs(n, k, ar) {
+    let divisible = 0
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            let sum = ar[i] + ar[j]
+            if (sum % k === 0) {
+                divisible++
+            }
+        }
+
+    }
+    console.log("div", divisible)
+}
+
+divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
+// should return 5
