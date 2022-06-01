@@ -33,3 +33,17 @@ const plusOne2 = (digits) => {
     console.log(digits)
 }
 plusOne([1, 2, 3, 4])
+
+const majorityElement = (nums) => {
+    let count = {}
+    for (const x of nums) {
+        count[x] = (count[x] || 0) + 1
+    }
+    console.log(count)
+
+    // sort in ascenting order
+    count = Object.keys(count).sort((a, b) => count[b] - count[a])
+    console.log(count[0])
+
+}
+majorityElement([2, 2, 1, 1, 1, 2, 2])
