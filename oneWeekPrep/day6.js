@@ -65,8 +65,11 @@ gradingStudentss([73, 67, 38, 33])
 
 function countingValleys(steps, path) {
     const pathSplit = path.toString().split('')
+    // console.log(pathSplit[0])
+    let valley
+    pathSplit[0] === "D" ? valley = 1 : valley = 0
     let count = 0
-    let valley = 0
+    // let valley = 0
     for (let i = 0; i < pathSplit.length; i++) {
         if (pathSplit[i] === "U" && count === 0) {
             count += 1, valley += 1
