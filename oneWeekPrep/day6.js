@@ -53,3 +53,41 @@ function gradingStudentss(grades) {
 
 }
 gradingStudentss([73, 67, 38, 33])
+
+// ===========================================================
+//                      NUMBER 2
+// ===========================================================
+// the steps represents the total # of steps taken
+// path is an array of D (downhill) & U (uphill)
+// return a count of how many valleys are incountered
+// ex: (8, [UDDDUDUU])
+// output = 1
+
+function countingValleys(steps, path) {
+    const pathSplit = path.toString().split('')
+    let count = 0
+    let valley = 0
+    for (let i = 0; i < pathSplit.length; i++) {
+        if (pathSplit[i] === "U" && count === 0) {
+            count += 1, valley += 1
+        }
+        else if (pathSplit[i] === "U") {
+            count += 1
+        }
+
+        else if (pathSplit[i] === "D") {
+            count -= 1
+        }
+        console.log("count", count)
+        console.log("valley", valley)
+    }
+    return valley
+}
+
+// countingValleys(8, ["UDDDUDUU"])
+// should return 1
+countingValleys(12, ["DDUUDDUDUUUD"])
+// should return 2
+
+
+
