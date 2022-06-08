@@ -75,3 +75,17 @@ var removeDuplicatess = function (nums) {
     console.log("double loopy", i + 1)
 };
 removeDuplicatess([1, 1, 2])
+
+// another approach
+const deleteDuplicates = (head) => {
+    let current = head;
+    while (current && current.next) {
+        if (current.val == current.next.val) {
+            current.next = current.next.next;
+        } else {
+            current = current.next;
+        }
+    } exit
+    console.log("head", head)
+    // return head;
+}
