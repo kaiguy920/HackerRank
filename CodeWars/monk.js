@@ -1,7 +1,7 @@
 // take in a string of vegetables & return the count in descending order
 
 function countVegetables(string) {
-    string = "potato tofu cucumber cabbage turnip pepper onion carrot celery mushroom potato tofu cucumber cabbage"
+    string = "potato tofu cucumber cabbage turnip pepper onion carrot celery mushroom potato tofu cucumber cabbage cabbage"
     const split = string.split(" ")
 
     const counter = []
@@ -14,10 +14,23 @@ function countVegetables(string) {
             // if this veggie IS already a property of veggieCounts, then increase its count value
             counter[veggie]++;
         }
-
-        console.log(counter)
-
     }
+    const sortObject = counter => {
+        const sorter = (a, b) => {
+            return counter[a] - counter[b];
+        };
+        const keys = Object.keys(counter);
+        keys.sort(sorter).reverse();
+        const res = {};
+        keys.forEach(key => {
+            res[key] = counter[key];
+        });
+        return res;
+    };
+    console.log(sortObject(counter));
+
+
+    console.log(counter.sort())
 }
 countVegetables()
 
@@ -30,6 +43,6 @@ function countVegetabless(string) {
         if (prop != 'chopsticks')
             array.push([veggies[prop], prop]);
     // return array.sort((a,b) => b[0] - a[0] || b[1].localeCompare(a[1]));
-    console.log("ehllo", array.sort((a, b) => b[0] - a[0] || b[1].localeCompare(a[1])))
+    // console.log("ehllo", array.sort((a, b) => b[0] - a[0] || b[1].localeCompare(a[1])))
 }
 countVegetabless()
