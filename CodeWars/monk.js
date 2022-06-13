@@ -29,8 +29,7 @@ function countVegetables(string) {
     };
     console.log(sortObject(counter));
 
-
-    console.log(counter.sort())
+    // console.log(counter.sort())
 }
 countVegetables()
 
