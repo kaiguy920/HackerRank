@@ -7,9 +7,9 @@ var isPalindrome = function (x) {
     //  first we need to split x into each number value
     let digits = x.toString().split('');
     let realDigits = digits.map(Number)
-    console.log(realDigits)
+    console.log("realDigits", realDigits)
     let xX = realDigits.join("")
-    console.log(xX)
+    console.log("xX", xX)
 
     //  then, we need to reverse the order of the array
     const xRev = realDigits.reverse().join("")
