@@ -13,8 +13,8 @@ function gradingStudents(grades) {
         if (grades[i] <= 40) {
             roundedGrades.push(grades[i])
         } else {
-            console.log("near", near)
-            console.log(Math.abs(near - grades[i]));
+            // console.log("near", near)
+            // console.log(Math.abs(near - grades[i]));
             let distance = Math.abs(near - grades[i])
             if (distance < 3) {
                 roundedGrades.push(near)
@@ -23,7 +23,7 @@ function gradingStudents(grades) {
             }
         }
     }
-    console.group(roundedGrades)
+    // console.group(roundedGrades)
 
 }
 gradingStudents([73, 67, 38, 33])
@@ -39,7 +39,7 @@ function gradingStudentss(grades) {
         if (grades[i] <= 40) {
             roundedGrades.push(grades[i])
         } else {
-            console.log("near", near)
+            // console.log("near", near)
             console.log(Math.abs(near - grades[i]));
             let distance = near - grades[i]
             if (distance < 3) {
@@ -49,7 +49,7 @@ function gradingStudentss(grades) {
             }
         }
     }
-    console.group("2", roundedGrades)
+    // console.group("2", roundedGrades)
 
 }
 gradingStudentss([73, 67, 38, 33])
@@ -81,8 +81,8 @@ function countingValleys(steps, path) {
         else if (pathSplit[i] === "D") {
             count -= 1
         }
-        console.log("count", count)
-        console.log("valley", valley)
+        // console.log("count", count)
+        // console.log("valley", valley)
     }
     return valley
 }
@@ -93,4 +93,30 @@ countingValleys(12, ["DDUUDDUDUUUD"])
 // should return 2
 
 
+// ===========================================================
+//                      NUMBER 3
+// ===========================================================
+// 
 
+// given a chocolate bar that has digits on it, determine the number of ways you can split it, based on the day/month of a birthday
+
+// s = array of chocolate bar squares with digits on it
+// d = birthday day of month
+// m = birth month (as #)
+// ex: s = [2, 2, 1, 3, 2], d= 4, m= 2
+// find how many ways to sum 4, using 2 bars from s
+// return = 2 => [2,2], [1,3]
+
+
+function birthday(s, d, m) {
+    // Write your code here
+    let count = 0;
+    for (let i = 0; i < s.length - m + 1; i++) {
+        if (s.slice(i, i + m).reduce((a, b) => a + b, 0) == d) count++
+    }
+    // return count
+    console.log(count)
+
+}
+
+birthday([2, 2, 1, 3, 2], 4, 2)
