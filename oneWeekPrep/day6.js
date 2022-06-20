@@ -115,8 +115,8 @@ function birthday(s, d, m) {
         if (s.slice(i, i + m).reduce((a, b) => a + b, 0) == d) count++
     }
     // return count
-    console.log(count)
+    console.log("count", count)
 
 }
 
-birthday([2, 2, 1, 3, 2], 4, 2)
+birthday([1, 2, 1, 3, 2], 3, 2)
