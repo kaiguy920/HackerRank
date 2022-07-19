@@ -40,7 +40,9 @@ const lengthOfLongestSubstrings = function (s) {
         let char = s.charAt(j)
         if (!set.has(char)) {
             set.add(char)
+            // move right part of sliding window
             j++
+            // Math.max returns the greater of the values
             count = Math.max(count, j - i)
         } else {
             set.delete(s.charAt(i))
