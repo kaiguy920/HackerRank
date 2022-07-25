@@ -2,10 +2,9 @@ const input = "We took the dog for a walk around the block. It started to rain, 
 
 const wordCount = (str) => {
 
-    const remove = str.replace(/\./g, "").toLowerCase()
+    const remove = str.replace(/\./g, "").replace(/\,/g, "").toLowerCase()
     // console.log(remove)
-    const removeComma = remove.replace(/\,/g, "")
-    const arr = removeComma.split(' ')
+    const arr = remove.split(' ')
     // console.log("this is arr", arr)
 
     const counter = {}
