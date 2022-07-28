@@ -21,24 +21,13 @@ const whosWorking = (clockIn, clockOut) => {
         let workersNames = Object.keys(shifts)
         // console.log(inTime);
         for (let i = 0; i < inTime.length; i++) {
-            for (let j = 0; j, outTime.length; j++) {
-                if (inTime[i] >= clockIn) {
-                    console.log(inTime.indexOf(inTime[i]))
-                }
+
+            if (inTime[i] >= clockIn) {
+                console.log("in", inTime[i])
+
             }
         }
-
-        // if (clockIn <= inTime || clockOut < outTime) {
-        //     console.log(shifts.indexOf(inTime || shifts.indexOf(outTime)));
-        // }
-
-    });
-    // function between(x, min, max) {
-    //     console.log(x >= min && x <= max);
-    // }
-    // if (between(clockIn, clockOut)) {
-    //     console.log("hello")
-    // }
+    }
 }
 
 whosWorking(5, 12)
