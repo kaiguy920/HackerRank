@@ -19,18 +19,13 @@ getCount("Vowels Count Tests")
 // =============================NUMBER 2=====================================
 // remove all vowels from string
 function disemvowel(str) {
-    const letters = str.split("")
-    let noVowel = ""
-    console.log(letters);
-    let vowels = ["a", "e", 'i', 'o', 'u', "A", "E", "I", "O", "U"]
-    for (let i = 0; i < letters.length; i++) {
-        vowels.map((el) => {
-            if (!letters[i].includes(el)) {
-                noVowel.push(letters[i])
-            }
-        })
+    let newStr = ""
+    for (let i = 0; i < str.length; i++) {
+        if ("aeiou".includes(str[i].toLowerCase())) continue;
+        newStr += str[i];
     }
-    console.log(noVowel.join(""))
-    // return str;
+    // console.log(newStr);
+    return newStr
 }
+
 disemvowel("This website is for losers LOL!")
