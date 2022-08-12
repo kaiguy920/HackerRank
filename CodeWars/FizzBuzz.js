@@ -16,3 +16,13 @@ var fibsFizzBuzz = function (n) {
 console.log(fibsFizzBuzz(5))
 
 
+function func(a, b) {
+    a += 1
+    b.push(1)
+}
+
+const a = 0
+const b = []
+
+funct(a, b)
+console.log(a, b)
