@@ -8,4 +8,4 @@ function digital_root(n) {
     });
     return result > 10 ? digital_root(result) : result;
 }
-console.log(digital_root(942))
+console.log(digital_root(493193))
