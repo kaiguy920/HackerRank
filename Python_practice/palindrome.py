@@ -16,4 +16,4 @@ def isPalindrome(num):
         return False
 
 
-print(isPalindrome(7227))
+print(isPalindrome(7427))
